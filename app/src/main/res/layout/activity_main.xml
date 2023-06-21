@@ -1,51 +1,72 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/text1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/drawnew"
     tools:context=".activities.MainActivity">
 
+
+    <TextView
+        android:id="@+id/textheading"
+        android:layout_width="296dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:background="#727E72"
+        android:text="Explore"
+
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.265" />
+
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="290dp"
+        android:layout_height="159dp"
+        android:text="In here we give a chance to book monthly season ticket for government workers.You can book in now!!."
         android:textAlignment="center"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.169" />
+
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnInsertData"
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="INSERT DATA"
-        android:textColor="@color/black"
+        android:backgroundTint="#C80B0A0A"
+        android:text="Back"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.201"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.445" />
+        app:layout_constraintVertical_bias="0.701" />
 
     <Button
-        android:id="@+id/btnFetchData"
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="FETCH DATA"
-        android:textColor="@color/black"
+        android:backgroundTint="#C8070707"
+        android:text="Next"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintHorizontal_bias="0.806"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.666" />
+        app:layout_constraintVertical_bias="0.701" />
+
+    <!-- Add other views here -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

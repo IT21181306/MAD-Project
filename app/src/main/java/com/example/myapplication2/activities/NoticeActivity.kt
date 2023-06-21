@@ -1,80 +1,43 @@
 package com.example.myapplication2.activities
 
-import android.os.Bundle
-import android.widget.TextView
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
 import com.example.myapplication2.R
 
 class NoticeActivity : AppCompatActivity() {
 
+    private lateinit var button3 : Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_notice)
 
-        // Get the user inputs from the Intent extras
-        val transportMethod = intent.getStringExtra("transportMethod")
-        val startingFrom = intent.getStringExtra("startingFrom")
-        val destination = intent.getStringExtra("destination")
+        button3 = findViewById(R.id.button3)
 
-        // Calculate the ticket price based on the user inputs
-        val ticketPrice = calculateTicketPrice(transportMethod, startingFrom, destination)
+        button3.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
 
-        // Display the ticket price in the activity_notice.xml layout
-        val ticketPriceTextView = findViewById<TextView>(R.id.tvTicketPrice)
-        ticketPriceTextView.text = "Ticket price: $ticketPrice"
-    }
+        val number1 = findViewById<EditText>(R.id.num11)
+        val number2 = findViewById<EditText>(R.id.num22)
+        val resultTextview = findViewById<TextView>(R.id.resultView)
+        val calButton = findViewById<Button>(R.id.calbutton)
 
-    private fun calculateTicketPrice(
-        transportMethod: String?,
-        startingFrom: String?,
-        destination: String?
-    ): Int {
-        return when (transportMethod) {
-            "train" -> {
-                when (startingFrom) {
-                    "Matara" -> {
-                        when (destination) {
-                            "Galle" -> 150
-                            "Kaluthara" -> 200
-                            "Kollupitiya" -> 250
-                            "Colombo" -> 300
-                            else -> 0
-                        }
-                    }
-                    "Galle" -> {
-                        when (destination) {
-                            "Kaluthara" -> 100
-                            "Kollupitiya" -> 150
-                            "Colombo" -> 200
-                            else -> 0
-                        }
-                    }
-                    else -> 0
-                }
+        calButton.setOnClickListener {
+            val n1 = number1.text.toString().toInt()
+            val n2 = number2.text.toString().toInt()
+            var result = 0
+            if (n1 < 35000 && n2 <= 4) {
+                result = 750 * n2
+                resultTextview.text = result.toString()
+            } else {
+                Toast.makeText(this, "Error: Invalid input .You are not selected ", Toast.LENGTH_SHORT).show()
             }
-            "bus" -> {
-                when (startingFrom) {
-                    "Matara" -> {
-                        when (destination) {
-                            "Galle" -> 300
-                            "Kaluthara" -> 350
-                            "Kollupitiya" -> 400
-                            "Colombo" -> 450
-                            else -> 0
-                        }
-                    }
-                    "Galle" -> {
-                        when (destination) {
-                            "Kaluthara" -> 300
-                            "Kollupitiya" -> 350
-                            "Colombo" -> 400
-                            else -> 0
-                        }
-                    }
-                    else -> 0
-                }
-            }
-            else -> 0
         }
     }
 }

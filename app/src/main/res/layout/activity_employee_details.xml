@@ -403,7 +403,7 @@
                         android:layout_gravity="center"
                         android:background="@drawable/btnbkg"
                         android:gravity="center"
-                        android:text="Starting From"
+                        android:text="Monthly Income"
                         android:textColor="@color/black"
 
 
@@ -459,7 +459,7 @@
                         android:layout_gravity="center"
                         android:background="@drawable/btnbkg"
                         android:gravity="center"
-                        android:text="Destination"
+                        android:text="No of emp in family"
                         android:textColor="@color/black"
 
 

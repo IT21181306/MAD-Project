@@ -65,7 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:ems="10"
-            android:hint="Employee Transport Method" />
+            android:hint="Monthly income" />
 
         <EditText
             android:id="@+id/etDestination"
@@ -73,7 +73,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:ems="10"
-            android:hint="Employee Destination"
+            android:hint="How many gov employees in your family "
             android:inputType="textPersonName" />
 
         <EditText
